@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cybersecurity Portfolio</title>
+  <link rel="stylesheet" href="data/styles.css">
+</head>
+
+<body>
+
+  <div id="architecture-container"></div>
+
+  <div id="ui-layer">
+    <header id="site-header">
+      <h1>RealPhantomLee Tucker</h1>
+      <p>Cybersecurity Architecture Portfolio</p>
+    </header>
+
+    <div id="projects-grid"></div>
+  </div>
+
+  <script>
+    async function loadCards() {
+      const res = await fetch("data/portfolio.json?v=" + Date.now());
+      const projects = await res.json();
+
+      const grid = document.getElementById("projects-grid");
+      grid.innerHTML = "";
+
+      projects.forEach(p => {
+        const card = document.createElement("div");
+
+        card.className = "project-card";
+        card.dataset.slug = p.slug;
+
+        card.innerHTML = `
+          <div class="project-title">${p.title}</div>
+          <div class="project-desc">${p.description}</div>
+        `;
+
+        grid.appendChild(card);
+      });
+
+      window.dispatchEvent(new Event("cards-loaded"));
+    }
+
+    loadCards();
+  </script>
+
+  <script type="module" src="scripts/architecture.js"></script>
+
+</body>
+</html>

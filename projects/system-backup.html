@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Cybersecurity Project</title>
+
+<style>
+
+body{
+background:#050d18;
+color:#e6edf3;
+font-family:monospace;
+margin:0;
+padding:0;
+}
+
+/* header */
+
+.header{
+padding:40px;
+border-bottom:1px solid rgba(0,255,200,0.2);
+background:linear-gradient(
+180deg,
+rgba(0,0,0,0.6),
+rgba(0,0,0,0)
+);
+}
+
+h1{
+color:#2dfc9f;
+font-size:42px;
+margin:0;
+}
+
+/* layout */
+
+.wrapper{
+max-width:1200px;
+margin:auto;
+padding:40px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+/* panels */
+
+.panel{
+background:rgba(0,0,0,0.4);
+border:1px solid rgba(0,255,200,0.2);
+border-radius:10px;
+padding:30px;
+backdrop-filter:blur(10px);
+box-shadow:0 0 30px rgba(0,255,200,0.1);
+}
+
+.panel h2{
+color:#40E0D0;
+margin-top:0;
+}
+
+/* tools */
+
+ul{
+list-style:none;
+padding:0;
+}
+
+li{
+padding:8px 0;
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+/* back link */
+
+.back{
+position:fixed;
+top:20px;
+left:20px;
+color:#40E0D0;
+text-decoration:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<a class="back" href="../index.html">← Back</a>
+
+<div class="header">
+<h1 id="title"></h1>
+</div>
+
+<div class="wrapper">
+
+<div class="panel">
+<h2>Overview</h2>
+<p id="description"></p>
+</div>
+
+<div class="panel">
+<h2>Tools Used</h2>
+<ul id="tools"></ul>
+</div>
+
+</div>
+
+<script>
+
+fetch("../data/portfolio.json")
+.then(res=>res.json())
+.then(data=>{
+
+const slug=window.location.pathname.split("/").pop().replace(".html","");
+
+const project=data.find(p=>p.slug===slug);
+
+document.getElementById("title").innerText=project.title;
+document.getElementById("description").innerText=project.description;
+
+const tools=document.getElementById("tools");
+
+project.tools.forEach(t=>{
+
+const li=document.createElement("li");
+
+li.innerText=t;
+
+tools.appendChild(li);
+
+});
+
+});
+
+</script>
+
+</body>
+
+</html>
