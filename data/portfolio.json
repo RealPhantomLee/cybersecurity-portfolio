@@ -1,302 +1,342 @@
 [
-{
-"title":"SIEM Monitoring & Log Analysis Lab",
-"slug":"siem-monitoring-lab",
-"description":"Centralized logging and alert analysis using Wazuh.",
-"category":"Monitoring",
+  {
+    "title": "SIEM Monitoring & Log Analysis Lab",
+    "slug": "siem-monitoring-lab",
+    "description": "Centralized logging and alert analysis using Wazuh.",
+    "category": "Monitoring",
 
-"summary":"Designed and deployed a centralized Security Information and Event Management (SIEM) environment using the Wazuh platform integrated with the Elastic Stack. Multiple Linux systems were configured with Wazuh agents to forward authentication logs, system activity, and security telemetry into a centralized monitoring server. The environment simulates the workflow of a Security Operations Center (SOC) where analysts monitor logs, detect suspicious activity, and investigate security alerts.",
+    "summary": "Designed and deployed a centralized Security Information and Event Management (SIEM) environment using the Wazuh platform integrated with the Elastic Stack. Multiple Linux systems were configured with Wazuh agents to forward authentication logs, system activity, and security telemetry into a centralized monitoring server. The environment simulates the workflow of a Security Operations Center (SOC) where analysts monitor logs, detect suspicious activity, and investigate security alerts.",
 
-"skills":[
-"Security event monitoring",
-"Log analysis and investigation",
-"Threat detection through system telemetry",
-"Security alert triage",
-"Security monitoring architecture design"
-],
+    "skills": [
+      "Security event monitoring",
+      "Log analysis and investigation",
+      "Threat detection through system telemetry",
+      "Security alert triage",
+      "Security monitoring architecture design"
+    ],
 
-"tools":[
-"Wazuh SIEM",
-"Elastic Stack",
-"Linux system logs",
-"SSH monitoring"
-],
+    "tools": [
+      "Wazuh SIEM",
+      "Elastic Stack",
+      "Linux system logs",
+      "SSH monitoring"
+    ],
 
-"results":[
-"Built a working centralized log aggregation pipeline",
-"Detected simulated suspicious login attempts",
-"Created dashboards visualizing system activity",
-"Practiced investigation of security alerts and telemetry"
-]
-},
+    "results": [
+      "Built a working centralized log aggregation pipeline",
+      "Detected simulated suspicious login attempts",
+      "Created dashboards visualizing system activity",
+      "Practiced investigation of security alerts and telemetry"
+    ]
+  },
 
-{
-"title":"Vulnerability Management Lab",
-"slug":"vulnerability-management-lab",
-"description":"Simulated vulnerability discovery, triage and remediation workflow.",
-"category":"Monitoring",
+  {
+    "title": "Custom Premium Website Product",
+    "slug": "custom-premium-website-product",
+    "description": "Premium interactive website product built to showcase projects, technical documentation, and polished client-facing presentation.",
+    "category": "Web / Presentation",
 
-"summary":"Built a vulnerability management workflow beginning with asset discovery, followed by vulnerability scanning and risk prioritization. Systems were scanned using OpenVAS and results were analyzed to determine which vulnerabilities posed the greatest operational risk. Remediation plans were documented and follow-up scans were performed to confirm vulnerabilities had been mitigated.",
+    "summary": "Designed and developed a premium interactive website product to showcase projects, technical documentation, and proof-driven deliverables through a polished, user-friendly experience. The build uses data-driven project cards, expandable detail panels, responsive layout behavior, and animated visual architecture to transform structured project work into a professional client- and recruiter-ready showcase.",
 
-"skills":[
-"Vulnerability assessment",
-"Risk prioritization",
-"Remediation planning",
-"Security scanning analysis"
-],
+    "skills": [
+      "Front-end web development",
+      "Responsive design implementation",
+      "Interactive UI development",
+      "User experience design",
+      "Information architecture",
+      "Data-driven content rendering",
+      "Component-based interface design",
+      "Technical documentation presentation"
+    ],
 
-"tools":[
-"OpenVAS",
-"Kali Linux",
-"Linux servers"
-],
+    "tools": [
+      "GitHub Pages",
+      "Git",
+      "GitHub",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "JSON",
+      "Three.js"
+    ],
 
-"results":[
-"Performed vulnerability scans across multiple hosts",
-"Identified high-risk vulnerabilities",
-"Documented remediation strategies",
-"Validated remediation through follow-up scans"
-]
-},
+    "results": [
+      "Designed and developed a live website product for professional project presentation",
+      "Built reusable project card components with expandable detail views",
+      "Integrated interactive visual architecture with project navigation",
+      "Improved accessibility and presentation of technical project content",
+      "Delivered a responsive experience across desktop and mobile devices",
+      "Produced a polished client-facing and recruiter-ready digital showcase"
+    ]
+  },
 
-{
-"title":"Azure Security Hardening & Monitoring",
-"slug":"azure-security-hardening",
-"description":"Cloud infrastructure hardened with identity, network and monitoring controls.",
-"category":"Cloud Security",
+  {
+    "title": "Vulnerability Management Lab",
+    "slug": "vulnerability-management-lab",
+    "description": "Simulated vulnerability discovery, triage and remediation workflow.",
+    "category": "Monitoring",
 
-"summary":"Deployed a secure Azure cloud environment and implemented multiple defensive layers including network security groups, identity access control, and monitoring instrumentation. SSH access was restricted to trusted IP ranges and system activity was monitored through centralized logging. The lab demonstrates practical cloud security engineering techniques used to reduce attack surface and improve visibility.",
+    "summary": "Built a vulnerability management workflow beginning with asset discovery, followed by vulnerability scanning and risk prioritization. Systems were scanned using OpenVAS and results were analyzed to determine which vulnerabilities posed the greatest operational risk. Remediation plans were documented and follow-up scans were performed to confirm vulnerabilities had been mitigated.",
 
-"skills":[
-"Cloud infrastructure security",
-"Network access restriction",
-"Identity and access management",
-"Cloud monitoring configuration"
-],
+    "skills": [
+      "Vulnerability assessment",
+      "Risk prioritization",
+      "Remediation planning",
+      "Security scanning analysis"
+    ],
 
-"tools":[
-"Microsoft Azure",
-"Azure VM",
-"Network Security Groups",
-"SSH hardening"
-],
+    "tools": [
+      "OpenVAS",
+      "Kali Linux",
+      "Linux servers"
+    ],
 
-"results":[
-"Restricted VM access to trusted IP ranges",
-"Implemented monitoring visibility for infrastructure",
-"Configured secure remote access",
-"Reduced attack surface of deployed cloud services"
-]
-},
+    "results": [
+      "Performed vulnerability scans across multiple hosts",
+      "Identified high-risk vulnerabilities",
+      "Documented remediation strategies",
+      "Validated remediation through follow-up scans"
+    ]
+  },
 
-{
-"title":"Azure Infrastructure Security Lab",
-"slug":"azure-infrastructure-lab",
-"description":"Deployment of secure Azure infrastructure including networking and VM architecture.",
-"category":"Cloud Security",
+  {
+    "title": "Azure Security Hardening & Monitoring",
+    "slug": "azure-security-hardening",
+    "description": "Cloud infrastructure hardened with identity, network and monitoring controls.",
+    "category": "Cloud Security",
 
-"summary":"Designed and deployed a cloud infrastructure environment using Microsoft Azure virtual machines and networking services. The project focused on learning how secure cloud infrastructure is architected, including network segmentation, VM configuration, and connectivity testing. The lab demonstrates how modern organizations deploy scalable cloud infrastructure securely.",
+    "summary": "Deployed a secure Azure cloud environment and implemented multiple defensive layers including network security groups, identity access control, and monitoring instrumentation. SSH access was restricted to trusted IP ranges and system activity was monitored through centralized logging. The lab demonstrates practical cloud security engineering techniques used to reduce attack surface and improve visibility.",
 
-"skills":[
-"Cloud infrastructure architecture",
-"Virtual machine deployment",
-"Network configuration",
-"Cloud resource management"
-],
+    "skills": [
+      "Cloud infrastructure security",
+      "Network access restriction",
+      "Identity and access management",
+      "Cloud monitoring configuration"
+    ],
 
-"tools":[
-"Microsoft Azure",
-"Azure Virtual Machines",
-"Azure Networking"
-],
+    "tools": [
+      "Microsoft Azure",
+      "Azure VM",
+      "Network Security Groups",
+      "SSH hardening"
+    ],
 
-"results":[
-"Deployed secure virtual machine infrastructure",
-"Configured network connectivity and segmentation",
-"Documented cloud architecture",
-"Validated remote access functionality"
-]
-},
+    "results": [
+      "Restricted VM access to trusted IP ranges",
+      "Implemented monitoring visibility for infrastructure",
+      "Configured secure remote access",
+      "Reduced attack surface of deployed cloud services"
+    ]
+  },
 
-{
-"title":"Security Toolchain Environment",
-"slug":"security-toolchain",
-"description":"Integrated cybersecurity tools used for vulnerability analysis and operations.",
-"category":"Operations",
+  {
+    "title": "Azure Infrastructure Security Lab",
+    "slug": "azure-infrastructure-lab",
+    "description": "Deployment of secure Azure infrastructure including networking and VM architecture.",
+    "category": "Cloud Security",
 
-"summary":"Built a portable cybersecurity toolchain environment containing commonly used security analysis tools. The toolchain allows vulnerability scanning, system analysis, and operational testing from a single environment. The objective of this lab was to understand how multiple security tools can be combined into a cohesive operational toolkit.",
+    "summary": "Designed and deployed a cloud infrastructure environment using Microsoft Azure virtual machines and networking services. The project focused on learning how secure cloud infrastructure is architected, including network segmentation, VM configuration, and connectivity testing. The lab demonstrates how modern organizations deploy scalable cloud infrastructure securely.",
 
-"skills":[
-"Security tooling integration",
-"Operational workflow design",
-"Security analysis environment setup"
-],
+    "skills": [
+      "Cloud infrastructure architecture",
+      "Virtual machine deployment",
+      "Network configuration",
+      "Cloud resource management"
+    ],
 
-"tools":[
-"Kali Linux",
-"Security testing tools"
-],
+    "tools": [
+      "Microsoft Azure",
+      "Azure Virtual Machines",
+      "Azure Networking"
+    ],
 
-"results":[
-"Created unified security testing toolkit",
-"Integrated multiple security analysis tools",
-"Established repeatable operational workflow"
-]
-},
+    "results": [
+      "Deployed secure virtual machine infrastructure",
+      "Configured network connectivity and segmentation",
+      "Documented cloud architecture",
+      "Validated remote access functionality"
+    ]
+  },
 
-{
-"title":"Security Operations HUD Interface",
-"slug":"security-hud",
-"description":"Custom terminal HUD for controlling security operations and workflows.",
-"category":"Operations",
+  {
+    "title": "Security Toolchain Environment",
+    "slug": "security-toolchain",
+    "description": "Integrated cybersecurity tools used for vulnerability analysis and operations.",
+    "category": "Operations",
 
-"summary":"Developed a custom terminal interface designed to simplify operational control of cybersecurity tools. The HUD provides a visual command menu that allows the operator to quickly launch security tools and operational workflows. The goal was to create a simplified operator interface similar to those used in professional security operations environments.",
+    "summary": "Built a portable cybersecurity toolchain environment containing commonly used security analysis tools. The toolchain allows vulnerability scanning, system analysis, and operational testing from a single environment. The objective of this lab was to understand how multiple security tools can be combined into a cohesive operational toolkit.",
 
-"skills":[
-"Terminal interface design",
-"Operational workflow automation",
-"Security tool orchestration"
-],
+    "skills": [
+      "Security tooling integration",
+      "Operational workflow design",
+      "Security analysis environment setup"
+    ],
 
-"tools":[
-"Bash",
-"Linux terminal",
-"Custom scripts"
-],
+    "tools": [
+      "Kali Linux",
+      "Security testing tools"
+    ],
 
-"results":[
-"Created simplified security operations interface",
-"Automated tool launching workflows",
-"Improved operator workflow efficiency"
-]
-},
+    "results": [
+      "Created unified security testing toolkit",
+      "Integrated multiple security analysis tools",
+      "Established repeatable operational workflow"
+    ]
+  },
 
-{
-"title":"Portable Cybersecurity Workstation",
-"slug":"cyberdeck",
-"description":"Custom cyberdeck workstation for portable security testing and analysis.",
-"category":"Infrastructure",
+  {
+    "title": "Security Operations HUD Interface",
+    "slug": "security-hud",
+    "description": "Custom terminal HUD for controlling security operations and workflows.",
+    "category": "Operations",
 
-"summary":"Designed and assembled a portable cybersecurity workstation capable of running multiple security testing environments. The cyberdeck allows security analysis to be performed from a portable platform and demonstrates how professionals may build mobile security labs for testing and training.",
+    "summary": "Developed a custom terminal interface designed to simplify operational control of cybersecurity tools. The HUD provides a visual command menu that allows the operator to quickly launch security tools and operational workflows. The goal was to create a simplified operator interface similar to those used in professional security operations environments.",
 
-"skills":[
-"Hardware integration",
-"Portable lab design",
-"Security workstation configuration"
-],
+    "skills": [
+      "Terminal interface design",
+      "Operational workflow automation",
+      "Security tool orchestration"
+    ],
 
-"tools":[
-"Raspberry Pi",
-"Kali Linux",
-"External storage"
-],
+    "tools": [
+      "Bash",
+      "Linux terminal",
+      "Custom scripts"
+    ],
 
-"results":[
-"Built portable cybersecurity workstation",
-"Configured multiple security tools",
-"Created mobile testing environment"
-]
-},
+    "results": [
+      "Created simplified security operations interface",
+      "Automated tool launching workflows",
+      "Improved operator workflow efficiency"
+    ]
+  },
 
-{
-"title":"Encrypted Live Security Environment",
-"slug":"encrypted-live-environment",
-"description":"Portable Linux security environment with encrypted persistence.",
-"category":"Infrastructure",
+  {
+    "title": "Portable Cybersecurity Workstation",
+    "slug": "cyberdeck",
+    "description": "Custom cyberdeck workstation for portable security testing and analysis.",
+    "category": "Infrastructure",
 
-"summary":"Created a secure portable operating system environment using a Linux live USB with encrypted persistence. The system allows security tools and configurations to remain persistent across sessions while protecting stored data through encryption.",
+    "summary": "Designed and assembled a portable cybersecurity workstation capable of running multiple security testing environments. The cyberdeck allows security analysis to be performed from a portable platform and demonstrates how professionals may build mobile security labs for testing and training.",
 
-"skills":[
-"Encrypted storage configuration",
-"Secure operating system deployment",
-"Portable environment design"
-],
+    "skills": [
+      "Hardware integration",
+      "Portable lab design",
+      "Security workstation configuration"
+    ],
 
-"tools":[
-"Kali Linux Live USB",
-"Linux encryption"
-],
+    "tools": [
+      "Raspberry Pi",
+      "Kali Linux",
+      "External storage"
+    ],
 
-"results":[
-"Built encrypted portable OS environment",
-"Maintained persistent configurations",
-"Protected sensitive data through encryption"
-]
-},
+    "results": [
+      "Built portable cybersecurity workstation",
+      "Configured multiple security tools",
+      "Created mobile testing environment"
+    ]
+  },
 
-{
-"title":"System Backup & Recovery Lab",
-"slug":"system-backup",
-"description":"Automated backup and recovery workflow protecting system configurations.",
-"category":"Infrastructure",
+  {
+    "title": "Encrypted Live Security Environment",
+    "slug": "encrypted-live-environment",
+    "description": "Portable Linux security environment with encrypted persistence.",
+    "category": "Infrastructure",
 
-"summary":"Designed a system backup workflow to protect critical lab configurations and project environments. Automated backup scripts were used to copy project data and system configurations to external storage devices to prevent data loss.",
+    "summary": "Created a secure portable operating system environment using a Linux live USB with encrypted persistence. The system allows security tools and configurations to remain persistent across sessions while protecting stored data through encryption.",
 
-"skills":[
-"Backup automation",
-"System recovery planning",
-"Data protection practices"
-],
+    "skills": [
+      "Encrypted storage configuration",
+      "Secure operating system deployment",
+      "Portable environment design"
+    ],
 
-"tools":[
-"Linux backup tools",
-"External storage"
-],
+    "tools": [
+      "Kali Linux Live USB",
+      "Linux encryption"
+    ],
 
-"results":[
-"Created repeatable backup process",
-"Protected project environments",
-"Validated recovery of stored data"
-]
-},
+    "results": [
+      "Built encrypted portable OS environment",
+      "Maintained persistent configurations",
+      "Protected sensitive data through encryption"
+    ]
+  },
 
-{
-"title":"Network Time Synchronization Service",
-"slug":"time-sync-service",
-"description":"Network-based time synchronization ensuring accurate system logging.",
-"category":"Infrastructure",
+  {
+    "title": "System Backup & Recovery Lab",
+    "slug": "system-backup",
+    "description": "Automated backup and recovery workflow protecting system configurations.",
+    "category": "Infrastructure",
 
-"summary":"Configured network time synchronization across multiple systems to ensure consistent system timestamps. Accurate timestamps are critical for log correlation during security investigations.",
+    "summary": "Designed a system backup workflow to protect critical lab configurations and project environments. Automated backup scripts were used to copy project data and system configurations to external storage devices to prevent data loss.",
 
-"skills":[
-"Network time configuration",
-"Log accuracy management"
-],
+    "skills": [
+      "Backup automation",
+      "System recovery planning",
+      "Data protection practices"
+    ],
 
-"tools":[
-"NTP",
-"Linux system services"
-],
+    "tools": [
+      "Linux backup tools",
+      "External storage"
+    ],
 
-"results":[
-"Maintained accurate timestamps across systems",
-"Improved reliability of log correlation"
-]
-},
+    "results": [
+      "Created repeatable backup process",
+      "Protected project environments",
+      "Validated recovery of stored data"
+    ]
+  },
 
-{
-"title":"Security Lab Repository Management System",
-"slug":"lab-repository-system",
-"description":"Git-based workflow managing cybersecurity lab documentation and version control.",
-"category":"Infrastructure",
+  {
+    "title": "Network Time Synchronization Service",
+    "slug": "time-sync-service",
+    "description": "Network-based time synchronization ensuring accurate system logging.",
+    "category": "Infrastructure",
 
-"summary":"Designed a version-controlled repository system to track cybersecurity lab development, documentation, and configurations. The repository provides a structured way to maintain project history and reproducibility.",
+    "summary": "Configured network time synchronization across multiple systems to ensure consistent system timestamps. Accurate timestamps are critical for log correlation during security investigations.",
 
-"skills":[
-"Version control",
-"Project documentation",
-"Repository organization"
-],
+    "skills": [
+      "Network time configuration",
+      "Log accuracy management"
+    ],
 
-"tools":[
-"Git",
-"GitHub"
-],
+    "tools": [
+      "NTP",
+      "Linux system services"
+    ],
 
-"results":[
-"Maintained structured lab documentation",
-"Tracked project history through version control",
-"Improved reproducibility of lab environments"
-]
-}
+    "results": [
+      "Maintained accurate timestamps across systems",
+      "Improved reliability of log correlation"
+    ]
+  },
+
+  {
+    "title": "Security Lab Repository Management System",
+    "slug": "lab-repository-system",
+    "description": "Git-based workflow managing cybersecurity lab documentation and version control.",
+    "category": "Infrastructure",
+
+    "summary": "Designed a version-controlled repository system to track cybersecurity lab development, documentation, and configurations. The repository provides a structured way to maintain project history and reproducibility.",
+
+    "skills": [
+      "Version control",
+      "Project documentation",
+      "Repository organization"
+    ],
+
+    "tools": [
+      "Git",
+      "GitHub"
+    ],
+
+    "results": [
+      "Maintained structured lab documentation",
+      "Tracked project history through version control",
+      "Improved reproducibility of lab environments"
+    ]
+  }
 ]
