@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <title>Cybersecurity Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RealPhantomLee Tucker — Cybersecurity Architecture Portfolio</title>
+  <meta name="description" content="Cybersecurity, cloud, hardware, and AI/ML projects by RealPhantomLee Tucker — documentation-first, evidence-driven builds.">
   <link rel="stylesheet" href="data/styles.css">
 </head>
 
@@ -14,7 +16,7 @@
   <div id="ui-layer">
     <header id="site-header">
       <h1>RealPhantomLee Tucker</h1>
-      <p>Cybersecurity Architecture Portfolio</p>
+      <p>Cybersecurity Architecture Portfolio · <a href="https://github.com/RealPhantomLee" target="_blank" rel="noreferrer">github.com/RealPhantomLee</a></p>
     </header>
 
     <div id="projects-grid"></div>
@@ -29,12 +31,14 @@
       grid.innerHTML = "";
 
       projects.forEach(p => {
-        const card = document.createElement("div");
+        const card = document.createElement("a");
 
         card.className = "project-card";
         card.dataset.slug = p.slug;
+        card.href = `projects/${p.slug}.html`;
 
         card.innerHTML = `
+          <div class="project-category">${p.category}</div>
           <div class="project-title">${p.title}</div>
           <div class="project-desc">${p.description}</div>
         `;

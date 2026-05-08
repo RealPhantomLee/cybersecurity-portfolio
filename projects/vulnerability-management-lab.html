@@ -1,144 +1,251 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 
 <meta charset="UTF-8">
-
-<title>Cybersecurity Project</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cybersecurity Project — RealPhantomLee Tucker</title>
 
 <style>
+  body {
+    background: #050d18;
+    color: #e6edf3;
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    line-height: 1.55;
+  }
 
-body{
-background:#050d18;
-color:#e6edf3;
-font-family:monospace;
-margin:0;
-padding:0;
-}
+  /* header */
+  .header {
+    padding: 60px 40px 40px;
+    border-bottom: 1px solid rgba(0, 255, 200, 0.2);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  }
 
-/* header */
+  .category-badge {
+    display: inline-block;
+    color: #2dfc9f;
+    border: 1px solid rgba(45, 252, 159, 0.5);
+    border-radius: 999px;
+    padding: 4px 12px;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
 
-.header{
-padding:40px;
-border-bottom:1px solid rgba(0,255,200,0.2);
-background:linear-gradient(
-180deg,
-rgba(0,0,0,0.6),
-rgba(0,0,0,0)
-);
-}
+  h1 {
+    color: #2dfc9f;
+    font-size: 38px;
+    margin: 0 0 16px;
+    line-height: 1.2;
+  }
 
-h1{
-color:#2dfc9f;
-font-size:42px;
-margin:0;
-}
+  .pitch {
+    color: #e6edf3;
+    opacity: 0.85;
+    max-width: 900px;
+    font-size: 16px;
+    margin: 0 0 24px;
+  }
 
-/* layout */
+  .actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
 
-.wrapper{
-max-width:1200px;
-margin:auto;
-padding:40px;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-}
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
 
-/* panels */
+  .btn-primary {
+    background: #2dfc9f;
+    color: #050d18;
+  }
 
-.panel{
-background:rgba(0,0,0,0.4);
-border:1px solid rgba(0,255,200,0.2);
-border-radius:10px;
-padding:30px;
-backdrop-filter:blur(10px);
-box-shadow:0 0 30px rgba(0,255,200,0.1);
-}
+  .btn-secondary {
+    background: transparent;
+    color: #2dfc9f;
+    border: 1px solid #2dfc9f;
+  }
 
-.panel h2{
-color:#40E0D0;
-margin-top:0;
-}
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(45, 252, 159, 0.25);
+  }
 
-/* tools */
+  /* layout */
+  .wrapper {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
 
-ul{
-list-style:none;
-padding:0;
-}
+  .panel {
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(0, 255, 200, 0.2);
+    border-radius: 10px;
+    padding: 28px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(0, 255, 200, 0.08);
+  }
 
-li{
-padding:8px 0;
-border-bottom:1px solid rgba(255,255,255,0.08);
-}
+  .panel.full {
+    grid-column: 1 / -1;
+  }
 
-/* back link */
+  .panel h2 {
+    color: #40E0D0;
+    margin: 0 0 14px;
+    font-size: 18px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
 
-.back{
-position:fixed;
-top:20px;
-left:20px;
-color:#40E0D0;
-text-decoration:none;
-}
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 
+  li {
+    padding: 8px 0 8px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+  }
+
+  li:last-child {
+    border-bottom: 0;
+  }
+
+  li::before {
+    content: "▸";
+    color: #2dfc9f;
+    position: absolute;
+    left: 0;
+  }
+
+  /* back link */
+  .back {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: #40E0D0;
+    text-decoration: none;
+    background: rgba(5, 13, 24, 0.8);
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 255, 200, 0.3);
+    z-index: 10;
+  }
+
+  .back:hover {
+    background: rgba(45, 252, 159, 0.15);
+  }
+
+  /* responsive */
+  @media (max-width: 900px) {
+    .wrapper {
+      grid-template-columns: 1fr;
+      padding: 24px;
+    }
+
+    .header {
+      padding: 60px 24px 32px;
+    }
+
+    h1 {
+      font-size: 28px;
+    }
+  }
 </style>
 
 </head>
 
 <body>
 
-<a class="back" href="../index.html">← Back</a>
+<a class="back" href="../index.html">← Back to portfolio</a>
 
 <div class="header">
-<h1 id="title"></h1>
+  <div class="category-badge" id="category"></div>
+  <h1 id="title"></h1>
+  <p class="pitch" id="pitch"></p>
+  <div class="actions">
+    <a class="btn btn-primary" id="github-link" target="_blank" rel="noreferrer">View on GitHub →</a>
+  </div>
 </div>
 
 <div class="wrapper">
 
-<div class="panel">
-<h2>Overview</h2>
-<p id="description"></p>
-</div>
+  <div class="panel full">
+    <h2>Overview</h2>
+    <p id="summary"></p>
+  </div>
 
-<div class="panel">
-<h2>Tools Used</h2>
-<ul id="tools"></ul>
-</div>
+  <div class="panel">
+    <h2>Skills</h2>
+    <ul id="skills"></ul>
+  </div>
+
+  <div class="panel">
+    <h2>Tools Used</h2>
+    <ul id="tools"></ul>
+  </div>
+
+  <div class="panel full">
+    <h2>Results</h2>
+    <ul id="results"></ul>
+  </div>
 
 </div>
 
 <script>
+  fetch("../data/portfolio.json")
+    .then(res => res.json())
+    .then(data => {
+      const slug = window.location.pathname.split("/").pop().replace(".html", "");
+      const project = data.find(p => p.slug === slug);
 
-fetch("../data/portfolio.json")
-.then(res=>res.json())
-.then(data=>{
+      if (!project) {
+        document.getElementById("title").innerText = "Project not found";
+        return;
+      }
 
-const slug=window.location.pathname.split("/").pop().replace(".html","");
+      document.title = project.title + " — RealPhantomLee Tucker";
+      document.getElementById("category").innerText = project.category;
+      document.getElementById("title").innerText = project.title;
+      document.getElementById("pitch").innerText = project.description;
+      document.getElementById("summary").innerText = project.summary;
+      document.getElementById("github-link").href = project.github_url;
 
-const project=data.find(p=>p.slug===slug);
+      const fillList = (id, items) => {
+        const ul = document.getElementById(id);
+        items.forEach(item => {
+          const li = document.createElement("li");
+          li.innerText = item;
+          ul.appendChild(li);
+        });
+      };
 
-document.getElementById("title").innerText=project.title;
-document.getElementById("description").innerText=project.description;
-
-const tools=document.getElementById("tools");
-
-project.tools.forEach(t=>{
-
-const li=document.createElement("li");
-
-li.innerText=t;
-
-tools.appendChild(li);
-
-});
-
-});
-
+      fillList("skills", project.skills);
+      fillList("tools", project.tools);
+      fillList("results", project.results);
+    });
 </script>
 
 </body>
-
 </html>

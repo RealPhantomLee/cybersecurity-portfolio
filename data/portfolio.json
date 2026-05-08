@@ -1,342 +1,385 @@
 [
   {
-    "title": "SIEM Monitoring & Log Analysis Lab",
-    "slug": "siem-monitoring-lab",
-    "description": "Centralized logging and alert analysis using Wazuh.",
-    "category": "Monitoring",
-
-    "summary": "Designed and deployed a centralized Security Information and Event Management (SIEM) environment using the Wazuh platform integrated with the Elastic Stack. Multiple Linux systems were configured with Wazuh agents to forward authentication logs, system activity, and security telemetry into a centralized monitoring server. The environment simulates the workflow of a Security Operations Center (SOC) where analysts monitor logs, detect suspicious activity, and investigate security alerts.",
-
-    "skills": [
-      "Security event monitoring",
-      "Log analysis and investigation",
-      "Threat detection through system telemetry",
-      "Security alert triage",
-      "Security monitoring architecture design"
-    ],
-
-    "tools": [
-      "Wazuh SIEM",
-      "Elastic Stack",
-      "Linux system logs",
-      "SSH monitoring"
-    ],
-
-    "results": [
-      "Built a working centralized log aggregation pipeline",
-      "Detected simulated suspicious login attempts",
-      "Created dashboards visualizing system activity",
-      "Practiced investigation of security alerts and telemetry"
-    ]
-  },
-
-  {
-    "title": "Custom Premium Website Product",
-    "slug": "custom-premium-website-product",
-    "description": "Premium interactive website product built to showcase projects, technical documentation, and polished client-facing presentation.",
-    "category": "Web / Presentation",
-
-    "summary": "Designed and developed a premium interactive website product to showcase projects, technical documentation, and proof-driven deliverables through a polished, user-friendly experience. The build uses data-driven project cards, expandable detail panels, responsive layout behavior, and animated visual architecture to transform structured project work into a professional client- and recruiter-ready showcase.",
-
-    "skills": [
-      "Front-end web development",
-      "Responsive design implementation",
-      "Interactive UI development",
-      "User experience design",
-      "Information architecture",
-      "Data-driven content rendering",
-      "Component-based interface design",
-      "Technical documentation presentation"
-    ],
-
-    "tools": [
-      "GitHub Pages",
-      "Git",
-      "GitHub",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "JSON",
-      "Three.js"
-    ],
-
-    "results": [
-      "Designed and developed a live website product for professional project presentation",
-      "Built reusable project card components with expandable detail views",
-      "Integrated interactive visual architecture with project navigation",
-      "Improved accessibility and presentation of technical project content",
-      "Delivered a responsive experience across desktop and mobile devices",
-      "Produced a polished client-facing and recruiter-ready digital showcase"
-    ]
-  },
-
-  {
     "title": "Vulnerability Management Lab",
     "slug": "vulnerability-management-lab",
-    "description": "Simulated vulnerability discovery, triage and remediation workflow.",
-    "category": "Monitoring",
-
-    "summary": "Built a vulnerability management workflow beginning with asset discovery, followed by vulnerability scanning and risk prioritization. Systems were scanned using OpenVAS and results were analyzed to determine which vulnerabilities posed the greatest operational risk. Remediation plans were documented and follow-up scans were performed to confirm vulnerabilities had been mitigated.",
-
+    "description": "End-to-end vulnerability lifecycle on three VulnHub targets — discover, enumerate, triage, validate, remediate, verify.",
+    "category": "Cybersecurity",
+    "github_url": "https://github.com/RealPhantomLee/vulnerability-management-lab",
+    "summary": "A hands-on vulnerability management lab performed against three VulnHub targets in an isolated VirtualBox host-only network. The lab walks the full lifecycle — discover → scan → triage → validate → remediation plan → verify — and captures every step as a real artifact. Findings are mapped to specific scan files, screenshots, and triage notes, so each conclusion is traceable to its evidence rather than asserted.",
     "skills": [
-      "Vulnerability assessment",
-      "Risk prioritization",
-      "Remediation planning",
-      "Security scanning analysis"
+      "Vulnerability management lifecycle execution",
+      "Asset discovery and inventory",
+      "Service / version enumeration with Nmap",
+      "Risk-based triage (P1 / P2 / P3)",
+      "Web exposure validation (HTTP method checks)",
+      "Remediation planning and compensating controls",
+      "Evidence-driven security documentation"
     ],
-
     "tools": [
-      "OpenVAS",
-      "Kali Linux",
-      "Linux servers"
+      "Nmap",
+      "curl",
+      "Searchsploit",
+      "VirtualBox (host-only network)",
+      "Kali Linux"
     ],
-
     "results": [
-      "Performed vulnerability scans across multiple hosts",
-      "Identified high-risk vulnerabilities",
-      "Documented remediation strategies",
-      "Validated remediation through follow-up scans"
+      "Performed full enumeration against EMP, ColddBox, and Hackable II",
+      "Identified P1-class findings on each target with reproducible evidence",
+      "Validated at least one high-impact finding per asset (e.g. anonymous FTP on Hackable II)",
+      "Produced remediation plans with compensating controls",
+      "Verified mitigations through follow-up scans"
     ]
   },
-
   {
-    "title": "Azure Security Hardening & Monitoring",
-    "slug": "azure-security-hardening",
-    "description": "Cloud infrastructure hardened with identity, network and monitoring controls.",
-    "category": "Cloud Security",
-
-    "summary": "Deployed a secure Azure cloud environment and implemented multiple defensive layers including network security groups, identity access control, and monitoring instrumentation. SSH access was restricted to trusted IP ranges and system activity was monitored through centralized logging. The lab demonstrates practical cloud security engineering techniques used to reduce attack surface and improve visibility.",
-
+    "title": "SIEM Monitoring & Log Analysis Lab",
+    "slug": "siem-monitoring-lab",
+    "description": "Single-node Wazuh SIEM on a Kali Live USB — manager + indexer + dashboard + local agent, with first-login guide and dashboard proof.",
+    "category": "Cybersecurity",
+    "github_url": "https://github.com/RealPhantomLee/logging-siem-wazuh",
+    "summary": "A working, hands-on SIEM lab: Wazuh installed end-to-end on Kali Live USB with encrypted persistence, with the local Kali host enrolled as the first agent. The repo ships the install script, a first-login checklist, and dashboard screenshots proving the stack is up and shipping events. The single-node footprint is intentional — the lab is fully portable and lets the operator stand up a SIEM anywhere a Pi cyberdeck can boot.",
     "skills": [
-      "Cloud infrastructure security",
-      "Network access restriction",
-      "Identity and access management",
-      "Cloud monitoring configuration"
+      "SIEM deployment (manager + indexer + dashboard)",
+      "Host-based intrusion detection",
+      "Log aggregation",
+      "File integrity monitoring",
+      "Vulnerability detection",
+      "Alert generation and tuning",
+      "Agent-based architecture"
     ],
-
     "tools": [
-      "Microsoft Azure",
-      "Azure VM",
-      "Network Security Groups",
-      "SSH hardening"
+      "Wazuh 4.7",
+      "Wazuh Indexer (OpenSearch fork)",
+      "Wazuh Dashboard",
+      "Filebeat",
+      "Linux syslog",
+      "Kali Live USB"
     ],
-
     "results": [
-      "Restricted VM access to trusted IP ranges",
-      "Implemented monitoring visibility for infrastructure",
-      "Configured secure remote access",
-      "Reduced attack surface of deployed cloud services"
+      "Deployed a single-node Wazuh stack from a vendored install script",
+      "Enrolled the local Kali host as the first reporting agent",
+      "Validated event ingestion via the dashboard",
+      "Documented the post-install checklist and admin-password rotation"
     ]
   },
-
-  {
-    "title": "Azure Infrastructure Security Lab",
-    "slug": "azure-infrastructure-lab",
-    "description": "Deployment of secure Azure infrastructure including networking and VM architecture.",
-    "category": "Cloud Security",
-
-    "summary": "Designed and deployed a cloud infrastructure environment using Microsoft Azure virtual machines and networking services. The project focused on learning how secure cloud infrastructure is architected, including network segmentation, VM configuration, and connectivity testing. The lab demonstrates how modern organizations deploy scalable cloud infrastructure securely.",
-
-    "skills": [
-      "Cloud infrastructure architecture",
-      "Virtual machine deployment",
-      "Network configuration",
-      "Cloud resource management"
-    ],
-
-    "tools": [
-      "Microsoft Azure",
-      "Azure Virtual Machines",
-      "Azure Networking"
-    ],
-
-    "results": [
-      "Deployed secure virtual machine infrastructure",
-      "Configured network connectivity and segmentation",
-      "Documented cloud architecture",
-      "Validated remote access functionality"
-    ]
-  },
-
   {
     "title": "Security Toolchain Environment",
     "slug": "security-toolchain",
-    "description": "Integrated cybersecurity tools used for vulnerability analysis and operations.",
-    "category": "Operations",
-
-    "summary": "Built a portable cybersecurity toolchain environment containing commonly used security analysis tools. The toolchain allows vulnerability scanning, system analysis, and operational testing from a single environment. The objective of this lab was to understand how multiple security tools can be combined into a cohesive operational toolkit.",
-
+    "description": "A repeatable framework for verifying that a Kali workstation has the right tools installed, and that they actually work — with reusable wrappers and labbed proof artifacts.",
+    "category": "Cybersecurity",
+    "github_url": "https://github.com/RealPhantomLee/toolchain-layer",
+    "summary": "Inventories the tools expected on an offensive-security workstation, wraps the most-used workflows so they run the same way every time, and validates each tool by linking labbed output (real scan results) back to the tool matrix. A tool listed without a `labs/` artifact is treated as unproven.",
     "skills": [
       "Security tooling integration",
       "Operational workflow design",
-      "Security analysis environment setup"
+      "Validation-driven documentation",
+      "Bash automation"
     ],
-
     "tools": [
-      "Kali Linux",
-      "Security testing tools"
+      "Nmap",
+      "Burp Suite",
+      "Nikto",
+      "Gobuster",
+      "ffuf",
+      "Wireshark",
+      "tcpdump",
+      "John the Ripper",
+      "Hashcat",
+      "Metasploit"
     ],
-
     "results": [
-      "Created unified security testing toolkit",
-      "Integrated multiple security analysis tools",
-      "Established repeatable operational workflow"
+      "One-shot tool presence check across the expected toolset",
+      "Reusable web-enumeration wrapper (nikto + gobuster + ffuf)",
+      "Tool matrix mapping each tool to its labbed validation artifact",
+      "Documented workflows for web enumeration and offline cracking"
     ]
   },
-
   {
-    "title": "Security Operations HUD Interface",
+    "title": "Security Operations HUD",
     "slug": "security-hud",
-    "description": "Custom terminal HUD for controlling security operations and workflows.",
-    "category": "Operations",
-
-    "summary": "Developed a custom terminal interface designed to simplify operational control of cybersecurity tools. The HUD provides a visual command menu that allows the operator to quickly launch security tools and operational workflows. The goal was to create a simplified operator interface similar to those used in professional security operations environments.",
-
+    "description": "Bash-driven operator HUD for a portable cyberdeck — tmux dashboard, KEY=VALUE status feeds, and one-line controls for network mode, logging, and capture.",
+    "category": "Cybersecurity",
+    "github_url": "https://github.com/RealPhantomLee/interface-hud-operator-controls",
+    "summary": "A glanceable operator interface for a Pi-based cyberdeck operating in the field. Three things — status producers that emit machine-readable KEY=VALUE blocks (host, CPU, memory, temperature, interface state, channel, active tools), a tmux 4-pane dashboard that watches them, and operator controls that toggle network mode, logging, and capture. No GUI dependencies; sudo-aware so controls degrade gracefully if not root.",
     "skills": [
       "Terminal interface design",
       "Operational workflow automation",
-      "Security tool orchestration"
+      "Bash scripting (with `set -euo pipefail`)",
+      "tmux session orchestration",
+      "Privilege-aware tool design"
     ],
-
     "tools": [
       "Bash",
-      "Linux terminal",
-      "Custom scripts"
+      "tmux",
+      "systemd",
+      "iproute2",
+      "OLED (optional, I²C 128×64)"
     ],
-
     "results": [
-      "Created simplified security operations interface",
-      "Automated tool launching workflows",
-      "Improved operator workflow efficiency"
+      "KEY=VALUE producers for host, network, and tool state",
+      "4-pane tmux dashboard (render / tools / net / status)",
+      "Sudo-aware operator toggles (managed / monitor / lab modes)",
+      "State persisted across reboots via the encrypted persistence partition"
     ]
   },
-
-  {
-    "title": "Portable Cybersecurity Workstation",
-    "slug": "cyberdeck",
-    "description": "Custom cyberdeck workstation for portable security testing and analysis.",
-    "category": "Infrastructure",
-
-    "summary": "Designed and assembled a portable cybersecurity workstation capable of running multiple security testing environments. The cyberdeck allows security analysis to be performed from a portable platform and demonstrates how professionals may build mobile security labs for testing and training.",
-
-    "skills": [
-      "Hardware integration",
-      "Portable lab design",
-      "Security workstation configuration"
-    ],
-
-    "tools": [
-      "Raspberry Pi",
-      "Kali Linux",
-      "External storage"
-    ],
-
-    "results": [
-      "Built portable cybersecurity workstation",
-      "Configured multiple security tools",
-      "Created mobile testing environment"
-    ]
-  },
-
   {
     "title": "Encrypted Live Security Environment",
     "slug": "encrypted-live-environment",
-    "description": "Portable Linux security environment with encrypted persistence.",
-    "category": "Infrastructure",
-
-    "summary": "Created a secure portable operating system environment using a Linux live USB with encrypted persistence. The system allows security tools and configurations to remain persistent across sessions while protecting stored data through encryption.",
-
+    "description": "Bootable Kali Live USB with LUKS-encrypted persistence — your hardened work environment travels in your pocket and stays unreadable if the stick is lost.",
+    "category": "Cybersecurity",
+    "github_url": "https://github.com/RealPhantomLee/live-usb-encrypted-persistence",
+    "summary": "A documented, reproducible workflow for building a Kali Live USB with LUKS-encrypted persistence. Boots reliably on commodity hardware, persists data across reboots, and ships sanitized proof artifacts so the build can be reproduced without exposing the operator's specific environment.",
     "skills": [
-      "Encrypted storage configuration",
+      "Encrypted storage configuration (LUKS)",
       "Secure operating system deployment",
-      "Portable environment design"
+      "Portable environment design",
+      "Public/private content separation"
     ],
-
     "tools": [
       "Kali Linux Live USB",
-      "Linux encryption"
+      "LUKS",
+      "Rufus / Balena Etcher / dd",
+      "GParted"
     ],
-
     "results": [
-      "Built encrypted portable OS environment",
-      "Maintained persistent configurations",
-      "Protected sensitive data through encryption"
+      "Bootable Live USB with LUKS-encrypted persistence",
+      "Documented build workflow with sanitized proof artifacts",
+      "Foundation that every other Brick Stack repo depends on"
     ]
   },
-
   {
-    "title": "System Backup & Recovery Lab",
+    "title": "Live USB Auto Time Sync",
+    "slug": "time-sync-service",
+    "description": "Automatic system time sync the moment a Kali Live USB connects to a network — NetworkManager dispatcher hook + connectivity check + systemd-timesyncd. Validated working.",
+    "category": "Cybersecurity",
+    "github_url": "https://github.com/RealPhantomLee/live-usb-auto-time-sync",
+    "summary": "A Live USB often boots offline or with a stale BIOS clock. That breaks HTTPS cert validation, log accuracy, and time-sensitive security tooling. This brick fixes that with a one-time setup: as soon as a usable network connects, the time syncs automatically. No manual ntpdate, no crons — just a NetworkManager dispatcher hook that runs the pipeline only when there's a real connection.",
+    "skills": [
+      "NetworkManager dispatcher hooks",
+      "Connectivity verification (nm-online + ping fallback)",
+      "Time synchronization with systemd-timesyncd",
+      "Log accuracy management",
+      "Defensive shell scripting"
+    ],
+    "tools": [
+      "NetworkManager",
+      "systemd-timesyncd",
+      "timedatectl",
+      "Bash",
+      "Linux"
+    ],
+    "results": [
+      "Time syncs automatically the moment a network connects",
+      "No daemons or cron required — event-driven only",
+      "Sanitized sample log shows real before/after sync deltas",
+      "Integrates cleanly with encrypted persistence (Brick #1)"
+    ]
+  },
+  {
+    "title": "System Backup & Recovery Workflow",
     "slug": "system-backup",
-    "description": "Automated backup and recovery workflow protecting system configurations.",
-    "category": "Infrastructure",
-
-    "summary": "Designed a system backup workflow to protect critical lab configurations and project environments. Automated backup scripts were used to copy project data and system configurations to external storage devices to prevent data loss.",
-
+    "description": "Repeatable, verifiable Linux backup workflow against an external drive — partition → format → mount → rsync → verify — config-driven and machine-agnostic.",
+    "category": "Cybersecurity",
+    "github_url": "https://github.com/RealPhantomLee/system-backup-brick12",
+    "summary": "Off-the-shelf backup tools either hide what they're doing or assume cloud storage. This brick is the opposite: explicit, scriptable, and produces logs you can show to a security auditor. The drive identifier, partition layout, mount point, and source root all come from a single config file — change one line and the whole pipeline retargets to a different drive. The format step requires typing the literal word ERASE; there is no -y flag.",
     "skills": [
       "Backup automation",
-      "System recovery planning",
-      "Data protection practices"
+      "Disk partitioning (GPT)",
+      "Filesystem formatting (ext4)",
+      "rsync-based incremental backup",
+      "Audit-friendly log capture",
+      "Defensive shell scripting"
     ],
-
     "tools": [
-      "Linux backup tools",
-      "External storage"
+      "rsync",
+      "parted",
+      "mkfs.ext4",
+      "lsblk",
+      "Bash"
     ],
-
     "results": [
-      "Created repeatable backup process",
-      "Protected project environments",
-      "Validated recovery of stored data"
+      "Config-driven runner that retargets via one file",
+      "Timestamped proof artifacts on every run (lsblk, parted, rsync, verify)",
+      "Explicit ERASE-typed gate prevents accidental wipes",
+      "Reproducible across any Linux host"
     ]
   },
-
   {
-    "title": "Network Time Synchronization Service",
-    "slug": "time-sync-service",
-    "description": "Network-based time synchronization ensuring accurate system logging.",
-    "category": "Infrastructure",
-
-    "summary": "Configured network time synchronization across multiple systems to ensure consistent system timestamps. Accurate timestamps are critical for log correlation during security investigations.",
-
+    "title": "Portable Cyberdeck Platform",
+    "slug": "cyberdeck",
+    "description": "Raspberry Pi 5 cyberdeck — portable, modular, documented, and field-ready. Hardware selection, OS hardening, power, and reproducible build docs.",
+    "category": "Hardware",
+    "github_url": "https://github.com/RealPhantomLee/cyberdeck-platform",
+    "summary": "Turns the persistent OS from Brick #1 into a physical, deployable system that can be operated at a desk, in a lab, or in the field. The emphasis is on hardware integration, mobility, power management, and documentation — not offensive techniques. Brick #1 is the brain; this brick is the body.",
     "skills": [
-      "Network time configuration",
-      "Log accuracy management"
+      "Hardware integration",
+      "Portable lab design",
+      "Power-budget planning",
+      "Linux hardening",
+      "Reproducible documentation"
     ],
-
     "tools": [
-      "NTP",
-      "Linux system services"
+      "Raspberry Pi 4 / 5",
+      "External Wi-Fi adapter (monitor mode)",
+      "OLED display (I²C 128×64)",
+      "USB / NVMe storage",
+      "Linux"
     ],
-
     "results": [
-      "Maintained accurate timestamps across systems",
-      "Improved reliability of log correlation"
+      "Portable cybersecurity workstation with stable power profile",
+      "Documented hardware BOM and assembly process",
+      "OS hardening baseline applied",
+      "Networking configured for non-offensive operation"
     ]
   },
-
   {
-    "title": "Security Lab Repository Management System",
-    "slug": "lab-repository-system",
-    "description": "Git-based workflow managing cybersecurity lab documentation and version control.",
-    "category": "Infrastructure",
-
-    "summary": "Designed a version-controlled repository system to track cybersecurity lab development, documentation, and configurations. The repository provides a structured way to maintain project history and reproducibility.",
-
+    "title": "Azure Fundamentals — Foundation Cell",
+    "slug": "azure-infrastructure-lab",
+    "description": "A reproducible Azure foundation: subscription + budget governance, VNet with segmented subnets, NSG controls, and a validated VM with stop-deallocate discipline.",
+    "category": "Cloud",
+    "github_url": "https://github.com/RealPhantomLee/azure-fundamentals-cell",
+    "summary": "A from-zero Azure environment built like a real engineering exercise: every architectural decision is recorded, every step is screenshot-proven, and cost governance is treated as a first-class requirement. The environment is the foundation layer that subsequent cells (security hardening, monitoring, detection, automation) build on top of. Public exposure status: none.",
     "skills": [
-      "Version control",
-      "Project documentation",
-      "Repository organization"
+      "Azure subscription bootstrapping",
+      "Resource group / VNet / subnet design",
+      "Network Security Group configuration",
+      "Cost governance (budget alerts)",
+      "VM lifecycle discipline (stop-deallocate)"
     ],
-
     "tools": [
-      "Git",
-      "GitHub"
+      "Microsoft Azure",
+      "Azure VM",
+      "Azure Virtual Network",
+      "Network Security Groups",
+      "Azure Cost Management"
     ],
-
     "results": [
-      "Maintained structured lab documentation",
-      "Tracked project history through version control",
-      "Improved reproducibility of lab environments"
+      "Subscription activated with budget guardrails on day 1",
+      "VNet with enterprise-style subnet segmentation",
+      "NSG-attached subnets with no public exposure",
+      "Validated Ubuntu VM deployment, then stopped/deallocated for cost discipline",
+      "40+ proof screenshots covering every step"
+    ]
+  },
+  {
+    "title": "Azure Security Hardening & Monitoring",
+    "slug": "azure-security-hardening",
+    "description": "End-to-end Azure security: NSG IP allowlisting, key-only SSH, Log Analytics + AMA + DCR, KQL detections for SSH success / failure / brute-force, and alert rules.",
+    "category": "Cloud",
+    "github_url": "https://github.com/RealPhantomLee/azure-security-monitoring-lab",
+    "summary": "Provision → Harden → Monitor → Detect → Respond → Improve. Stand up infrastructure (Cell A), harden it (NSG /32 allowlisting, SSH key-only), instrument it (Log Analytics + Azure Monitor Agent + Data Collection Rule for LOG_AUTH/LOG_AUTHPRIV), write KQL detections (heartbeat, SSH success / failure, brute-force ≥5 failures in 5 minutes), configure alerts (`ssh-bruteforce-5in5m`, `heartbeat-stale-5m`), and verify by exercising the alerts.",
+    "skills": [
+      "Cloud security engineering",
+      "Network access restriction (NSG /32)",
+      "SSH key-only authentication",
+      "Centralized logging with AMA + DCR",
+      "KQL detection engineering",
+      "Alert rule design"
+    ],
+    "tools": [
+      "Microsoft Azure",
+      "Log Analytics Workspace",
+      "Azure Monitor Agent (AMA)",
+      "Data Collection Rule (DCR)",
+      "KQL",
+      "Azure Monitor Alerts"
+    ],
+    "results": [
+      "Inbound SSH restricted to a single /32 source",
+      "Password auth disabled; SSH key-only enforced",
+      "Linux auth logs centralized into Log Analytics",
+      "KQL detections covering SSH success, failure, and brute-force",
+      "Two Sev-3 alerts firing on real telemetry"
+    ]
+  },
+  {
+    "title": "Airpoint — Touchless Cursor (Computer Vision)",
+    "slug": "airpoint",
+    "description": "Touchless cursor control via webcam — 15+ hand gestures, PyQt5 GUI, system tray, fully offline. Privacy-first: no network calls, no telemetry.",
+    "category": "AI / ML",
+    "github_url": "https://github.com/RealPhantomLee/airpoint",
+    "summary": "Move your mouse, click, scroll, and drag — all with hand gestures, using just your webcam. No hardware modifications, no cloud processing, no telemetry. The hand-tracking model runs locally and the application requires zero internet access during normal use. Cross-platform (Linux / macOS / Windows) with one-liner install scripts and a full GUI control panel for sensitivity, smoothing, and gesture toggles.",
+    "skills": [
+      "Computer vision pipeline design",
+      "Cross-platform desktop application development",
+      "Real-time gesture recognition",
+      "GUI development (PyQt5)",
+      "Privacy-by-design engineering",
+      "Cross-platform install automation"
+    ],
+    "tools": [
+      "Python 3.12",
+      "MediaPipe (hand tracking)",
+      "OpenCV (video processing)",
+      "PyQt5 (GUI)",
+      "pynput (cross-platform input)"
+    ],
+    "results": [
+      "15+ recognized gestures (click, double-click, right-click, scroll, drag, volume / media control)",
+      "Cross-platform install scripts for Linux, macOS, and Windows",
+      "GUI control panel with live preview, sliders, and gesture toggles",
+      "System tray integration with start/stop/quit menu",
+      "Camera auto-recovery on unplug/replug",
+      "Zero network calls during normal operation"
+    ]
+  },
+  {
+    "title": "Local AI Web Workspace",
+    "slug": "local-ai-workspace",
+    "description": "Local-first AI workspace: Ollama + AnythingLLM + Homarr behind a single docker compose. Cross-platform bootstrap. No cloud account required.",
+    "category": "AI / ML",
+    "github_url": "https://github.com/RealPhantomLee/Local-AI-Web-Workspace",
+    "summary": "Run your own AI models on your own machine, with a clean browser-based interface. The stack pairs Ollama (running natively on the host for inference) with AnythingLLM (browser chat UI in Docker) and Homarr (dashboard / landing page in Docker), wired together so AnythingLLM talks to Ollama on the right host bridge for each platform. Cross-platform bootstrap scripts install Docker and Ollama if missing, and a sanitization workflow keeps real environment values out of the public repo.",
+    "skills": [
+      "Local-first AI architecture",
+      "Docker Compose orchestration",
+      "Cross-platform bootstrap automation",
+      "Public/private content separation",
+      "User-facing deployment documentation"
+    ],
+    "tools": [
+      "Ollama",
+      "AnythingLLM",
+      "Homarr",
+      "Docker / Docker Compose",
+      "Bash / PowerShell"
+    ],
+    "results": [
+      "One-command bootstrap installs Docker + Ollama on Linux / macOS / Windows",
+      "Three-service stack (Homarr / AnythingLLM / Ollama) with correct cross-platform host bridging",
+      "Optional extras (code-server, WeTTY, Filebrowser) as separate compose files",
+      "Sanitization checklist enforces no real secrets or hostnames in the public repo"
+    ]
+  },
+  {
+    "title": "VaultKeeper — Encrypted Knowledge Platform",
+    "slug": "vaultkeeper",
+    "description": "Local-first, end-to-end encrypted knowledge platform — Tauri desktop + React Native mobile + Rust (Axum) sync server on a Pi. XChaCha20-Poly1305, SQLite FTS5, D3 graph view.",
+    "category": "Cybersecurity",
+    "github_url": "https://github.com/RealPhantomLee/VaultKeeper",
+    "summary": "An Obsidian-style knowledge platform that puts the user in control of their data. Notes are stored as plain markdown on the device, encrypted client-side with XChaCha20-Poly1305 (libsodium) before optional sync, and synced to a Raspberry Pi running a Rust Axum server in Docker. Cross-platform: Tauri (desktop) + React Native (mobile) sharing a Rust crypto/sync core.",
+    "skills": [
+      "End-to-end encryption design (XChaCha20-Poly1305 / libsodium)",
+      "Local-first sync protocol design",
+      "Cross-platform mobile + desktop architecture",
+      "Self-hosted server deployment (Docker on Pi)",
+      "TLS / Tailscale / firewall hardening"
+    ],
+    "tools": [
+      "Tauri",
+      "React Native",
+      "Rust (Axum)",
+      "TypeScript",
+      "SQLite (FTS5)",
+      "libsodium",
+      "Docker / Docker Compose",
+      "Argon2id"
+    ],
+    "results": [
+      "Monorepo with shared TypeScript types, crypto, and sync-protocol packages",
+      "Tauri desktop app with TipTap editor, command palette, D3 graph view",
+      "React Native mobile app",
+      "Rust sync server with JWT + Argon2id auth",
+      "Docker / Nginx / Tailscale deployment templates"
     ]
   }
 ]
