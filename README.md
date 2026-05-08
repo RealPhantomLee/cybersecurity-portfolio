@@ -28,22 +28,32 @@ The architecture animation (`scripts/architecture.js`) runs as a WebGL backgroun
 
 ## Projects featured
 
-The site currently surfaces 12 projects across cyber, cloud, hardware, and web:
+The site surfaces 13 projects across cybersecurity, hardware, cloud, and AI/ML — each one a real GitHub repo:
 
-- SIEM Monitoring & Log Analysis Lab
+**Cybersecurity**
 - Vulnerability Management Lab
-- Encrypted Live Security Environment
+- SIEM Monitoring & Log Analysis Lab (Wazuh)
 - Security Toolchain Environment
-- Security Operations HUD Interface
-- Cyberdeck Build
-- Azure Infrastructure Security Lab
-- Azure Security Hardening & Monitoring
-- System Backup & Recovery Lab
-- Time Sync Service (NetworkManager dispatcher)
-- Security Lab Repository Management System
-- Custom Premium Website Product
+- Security Operations HUD
+- Encrypted Live Security Environment (LUKS)
+- Live USB Auto Time Sync
+- System Backup & Recovery Workflow
+- VaultKeeper — Encrypted Knowledge Platform
 
-Source of truth is [`data/portfolio.json`](data/portfolio.json). Per-project pages live in [`projects/`](projects/).
+**Hardware**
+- Portable Cyberdeck Platform
+
+**Cloud**
+- Azure Fundamentals — Foundation Cell
+- Azure Security Hardening & Monitoring
+
+**AI / ML**
+- Airpoint — Touchless Cursor (Computer Vision)
+- Local AI Web Workspace
+
+> Web projects (production sites, e-commerce, portfolio sites) are deliberately not surfaced here — they live on [phantomcybersolutions.com](https://phantomcybersolutions.com) as proof of work.
+
+Source of truth is [`data/portfolio.json`](data/portfolio.json). Each entry has a `github_url` so cards and detail pages link directly to the corresponding repo. Per-project pages live in [`projects/`](projects/).
 
 ---
 
@@ -92,18 +102,21 @@ python3 scripts/generate-portfolio.py
 
 ## Related projects
 
-This site is the index for these labs:
+This site is the index for these repos (every card links directly to the repo):
 
-- [vulnerability-management-lab](https://github.com/RealPhantomLee/vulnerability-management-lab) — end-to-end VM lifecycle on VulnHub targets
-- [logging-siem-wazuh](https://github.com/RealPhantomLee/logging-siem-wazuh) — Wazuh SIEM on Kali Live USB
-- [toolchain-layer](https://github.com/RealPhantomLee/toolchain-layer) — security tool inventory and validation
-- [interface-hud-operator-controls](https://github.com/RealPhantomLee/interface-hud-operator-controls) — operator HUD
-- [cyberdeck-platform](https://github.com/RealPhantomLee/cyberdeck-platform) — Pi cyberdeck hardware
-- [live-usb-encrypted-persistence](https://github.com/RealPhantomLee/live-usb-encrypted-persistence) — encrypted Kali Live USB
-- [live-usb-auto-time-sync](https://github.com/RealPhantomLee/live-usb-auto-time-sync) — NetworkManager time-sync dispatcher
-- [system-backup-brick12](https://github.com/RealPhantomLee/system-backup-brick12) — repeatable system-backup workflow
-- [azure-fundamentals-cell](https://github.com/RealPhantomLee/azure-fundamentals-cell) — Azure foundation
-- [azure-security-monitoring-lab](https://github.com/RealPhantomLee/azure-security-monitoring-lab) — Azure security hardening + monitoring
+- [vulnerability-management-lab](https://github.com/RealPhantomLee/vulnerability-management-lab)
+- [logging-siem-wazuh](https://github.com/RealPhantomLee/logging-siem-wazuh)
+- [toolchain-layer](https://github.com/RealPhantomLee/toolchain-layer)
+- [interface-hud-operator-controls](https://github.com/RealPhantomLee/interface-hud-operator-controls)
+- [live-usb-encrypted-persistence](https://github.com/RealPhantomLee/live-usb-encrypted-persistence)
+- [live-usb-auto-time-sync](https://github.com/RealPhantomLee/live-usb-auto-time-sync)
+- [system-backup-brick12](https://github.com/RealPhantomLee/system-backup-brick12)
+- [VaultKeeper](https://github.com/RealPhantomLee/VaultKeeper)
+- [cyberdeck-platform](https://github.com/RealPhantomLee/cyberdeck-platform)
+- [azure-fundamentals-cell](https://github.com/RealPhantomLee/azure-fundamentals-cell)
+- [azure-security-monitoring-lab](https://github.com/RealPhantomLee/azure-security-monitoring-lab)
+- [airpoint](https://github.com/RealPhantomLee/airpoint)
+- [Local-AI-Web-Workspace](https://github.com/RealPhantomLee/Local-AI-Web-Workspace)
 
 ---
 
