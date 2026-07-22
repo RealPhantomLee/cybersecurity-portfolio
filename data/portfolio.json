@@ -1,33 +1,33 @@
 [
   {
-    "title": "Vulnerability Management Lab",
-    "slug": "vulnerability-management-lab",
-    "description": "End-to-end vulnerability lifecycle on three VulnHub targets — discover, enumerate, triage, validate, remediate, verify.",
-    "category": "Cybersecurity",
-    "github_url": "https://github.com/RealPhantomLee/vulnerability-management-lab",
-    "summary": "A hands-on vulnerability management lab performed against three VulnHub targets in an isolated VirtualBox host-only network. The lab walks the full lifecycle — discover → scan → triage → validate → remediation plan → verify — and captures every step as a real artifact. Findings are mapped to specific scan files, screenshots, and triage notes, so each conclusion is traceable to its evidence rather than asserted.",
+    "title": "Azure Security Hardening & Monitoring",
+    "slug": "azure-security-hardening",
+    "description": "End-to-end Azure security: NSG IP allowlisting, key-only SSH, Log Analytics + AMA + DCR, KQL detections for SSH success / failure / brute-force, and alert rules.",
+    "category": "Cloud",
+    "github_url": "https://github.com/RealPhantomLee/azure-security-monitoring-lab",
+    "summary": "Provision → Harden → Monitor → Detect → Respond → Improve. Stand up infrastructure (Cell A), harden it (NSG /32 allowlisting, SSH key-only), instrument it (Log Analytics + Azure Monitor Agent + Data Collection Rule for LOG_AUTH/LOG_AUTHPRIV), write KQL detections (heartbeat, SSH success / failure, brute-force ≥5 failures in 5 minutes), configure alerts (`ssh-bruteforce-5in5m`, `heartbeat-stale-5m`), and verify by exercising the alerts.",
     "skills": [
-      "Vulnerability management lifecycle execution",
-      "Asset discovery and inventory",
-      "Service / version enumeration with Nmap",
-      "Risk-based triage (P1 / P2 / P3)",
-      "Web exposure validation (HTTP method checks)",
-      "Remediation planning and compensating controls",
-      "Evidence-driven security documentation"
+      "Cloud security engineering",
+      "Network access restriction (NSG /32)",
+      "SSH key-only authentication",
+      "Centralized logging with AMA + DCR",
+      "KQL detection engineering",
+      "Alert rule design"
     ],
     "tools": [
-      "Nmap",
-      "curl",
-      "Searchsploit",
-      "VirtualBox (host-only network)",
-      "Kali Linux"
+      "Microsoft Azure",
+      "Log Analytics Workspace",
+      "Azure Monitor Agent (AMA)",
+      "Data Collection Rule (DCR)",
+      "KQL",
+      "Azure Monitor Alerts"
     ],
     "results": [
-      "Performed full enumeration against EMP, ColddBox, and Hackable II",
-      "Identified P1-class findings on each target with reproducible evidence",
-      "Validated at least one high-impact finding per asset (e.g. anonymous FTP on Hackable II)",
-      "Produced remediation plans with compensating controls",
-      "Verified mitigations through follow-up scans"
+      "Inbound SSH restricted to a single /32 source",
+      "Password auth disabled; SSH key-only enforced",
+      "Linux auth logs centralized into Log Analytics",
+      "KQL detections covering SSH success, failure, and brute-force",
+      "Two Sev-3 alerts firing on real telemetry"
     ]
   },
   {
@@ -62,173 +62,34 @@
     ]
   },
   {
-    "title": "Security Toolchain Environment",
-    "slug": "security-toolchain",
-    "description": "A repeatable framework for verifying that a Kali workstation has the right tools installed, and that they actually work — with reusable wrappers and labbed proof artifacts.",
+    "title": "Vulnerability Management Lab",
+    "slug": "vulnerability-management-lab",
+    "description": "End-to-end vulnerability lifecycle on three VulnHub targets — discover, enumerate, triage, validate, remediate, verify.",
     "category": "Cybersecurity",
-    "github_url": "https://github.com/RealPhantomLee/toolchain-layer",
-    "summary": "Inventories the tools expected on an offensive-security workstation, wraps the most-used workflows so they run the same way every time, and validates each tool by linking labbed output (real scan results) back to the tool matrix. A tool listed without a `labs/` artifact is treated as unproven.",
+    "github_url": "https://github.com/RealPhantomLee/vulnerability-management-lab",
+    "summary": "A hands-on vulnerability management lab performed against three VulnHub targets in an isolated VirtualBox host-only network. The lab walks the full lifecycle — discover → scan → triage → validate → remediation plan → verify — and captures every step as a real artifact. Findings are mapped to specific scan files, screenshots, and triage notes, so each conclusion is traceable to its evidence rather than asserted.",
     "skills": [
-      "Security tooling integration",
-      "Operational workflow design",
-      "Validation-driven documentation",
-      "Bash automation"
+      "Vulnerability management lifecycle execution",
+      "Asset discovery and inventory",
+      "Service / version enumeration with Nmap",
+      "Risk-based triage (P1 / P2 / P3)",
+      "Web exposure validation (HTTP method checks)",
+      "Remediation planning and compensating controls",
+      "Evidence-driven security documentation"
     ],
     "tools": [
       "Nmap",
-      "Burp Suite",
-      "Nikto",
-      "Gobuster",
-      "ffuf",
-      "Wireshark",
-      "tcpdump",
-      "John the Ripper",
-      "Hashcat",
-      "Metasploit"
+      "curl",
+      "Searchsploit",
+      "VirtualBox (host-only network)",
+      "Kali Linux"
     ],
     "results": [
-      "One-shot tool presence check across the expected toolset",
-      "Reusable web-enumeration wrapper (nikto + gobuster + ffuf)",
-      "Tool matrix mapping each tool to its labbed validation artifact",
-      "Documented workflows for web enumeration and offline cracking"
-    ]
-  },
-  {
-    "title": "Security Operations HUD",
-    "slug": "security-hud",
-    "description": "Bash-driven operator HUD for a portable cyberdeck — tmux dashboard, KEY=VALUE status feeds, and one-line controls for network mode, logging, and capture.",
-    "category": "Cybersecurity",
-    "github_url": "https://github.com/RealPhantomLee/interface-hud-operator-controls",
-    "summary": "A glanceable operator interface for a Pi-based cyberdeck operating in the field. Three things — status producers that emit machine-readable KEY=VALUE blocks (host, CPU, memory, temperature, interface state, channel, active tools), a tmux 4-pane dashboard that watches them, and operator controls that toggle network mode, logging, and capture. No GUI dependencies; sudo-aware so controls degrade gracefully if not root.",
-    "skills": [
-      "Terminal interface design",
-      "Operational workflow automation",
-      "Bash scripting (with `set -euo pipefail`)",
-      "tmux session orchestration",
-      "Privilege-aware tool design"
-    ],
-    "tools": [
-      "Bash",
-      "tmux",
-      "systemd",
-      "iproute2",
-      "OLED (optional, I²C 128×64)"
-    ],
-    "results": [
-      "KEY=VALUE producers for host, network, and tool state",
-      "4-pane tmux dashboard (render / tools / net / status)",
-      "Sudo-aware operator toggles (managed / monitor / lab modes)",
-      "State persisted across reboots via the encrypted persistence partition"
-    ]
-  },
-  {
-    "title": "Encrypted Live Security Environment",
-    "slug": "encrypted-live-environment",
-    "description": "Bootable Kali Live USB with LUKS-encrypted persistence — your hardened work environment travels in your pocket and stays unreadable if the stick is lost.",
-    "category": "Cybersecurity",
-    "github_url": "https://github.com/RealPhantomLee/live-usb-encrypted-persistence",
-    "summary": "A documented, reproducible workflow for building a Kali Live USB with LUKS-encrypted persistence. Boots reliably on commodity hardware, persists data across reboots, and ships sanitized proof artifacts so the build can be reproduced without exposing the operator's specific environment.",
-    "skills": [
-      "Encrypted storage configuration (LUKS)",
-      "Secure operating system deployment",
-      "Portable environment design",
-      "Public/private content separation"
-    ],
-    "tools": [
-      "Kali Linux Live USB",
-      "LUKS",
-      "Rufus / Balena Etcher / dd",
-      "GParted"
-    ],
-    "results": [
-      "Bootable Live USB with LUKS-encrypted persistence",
-      "Documented build workflow with sanitized proof artifacts",
-      "Foundation that every other Brick Stack repo depends on"
-    ]
-  },
-  {
-    "title": "Live USB Auto Time Sync",
-    "slug": "time-sync-service",
-    "description": "Automatic system time sync the moment a Kali Live USB connects to a network — NetworkManager dispatcher hook + connectivity check + systemd-timesyncd. Validated working.",
-    "category": "Cybersecurity",
-    "github_url": "https://github.com/RealPhantomLee/live-usb-auto-time-sync",
-    "summary": "A Live USB often boots offline or with a stale BIOS clock. That breaks HTTPS cert validation, log accuracy, and time-sensitive security tooling. This brick fixes that with a one-time setup: as soon as a usable network connects, the time syncs automatically. No manual ntpdate, no crons — just a NetworkManager dispatcher hook that runs the pipeline only when there's a real connection.",
-    "skills": [
-      "NetworkManager dispatcher hooks",
-      "Connectivity verification (nm-online + ping fallback)",
-      "Time synchronization with systemd-timesyncd",
-      "Log accuracy management",
-      "Defensive shell scripting"
-    ],
-    "tools": [
-      "NetworkManager",
-      "systemd-timesyncd",
-      "timedatectl",
-      "Bash",
-      "Linux"
-    ],
-    "results": [
-      "Time syncs automatically the moment a network connects",
-      "No daemons or cron required — event-driven only",
-      "Sanitized sample log shows real before/after sync deltas",
-      "Integrates cleanly with encrypted persistence (Brick #1)"
-    ]
-  },
-  {
-    "title": "System Backup & Recovery Workflow",
-    "slug": "system-backup",
-    "description": "Repeatable, verifiable Linux backup workflow against an external drive — partition → format → mount → rsync → verify — config-driven and machine-agnostic.",
-    "category": "Cybersecurity",
-    "github_url": "https://github.com/RealPhantomLee/system-backup-brick12",
-    "summary": "Off-the-shelf backup tools either hide what they're doing or assume cloud storage. This brick is the opposite: explicit, scriptable, and produces logs you can show to a security auditor. The drive identifier, partition layout, mount point, and source root all come from a single config file — change one line and the whole pipeline retargets to a different drive. The format step requires typing the literal word ERASE; there is no -y flag.",
-    "skills": [
-      "Backup automation",
-      "Disk partitioning (GPT)",
-      "Filesystem formatting (ext4)",
-      "rsync-based incremental backup",
-      "Audit-friendly log capture",
-      "Defensive shell scripting"
-    ],
-    "tools": [
-      "rsync",
-      "parted",
-      "mkfs.ext4",
-      "lsblk",
-      "Bash"
-    ],
-    "results": [
-      "Config-driven runner that retargets via one file",
-      "Timestamped proof artifacts on every run (lsblk, parted, rsync, verify)",
-      "Explicit ERASE-typed gate prevents accidental wipes",
-      "Reproducible across any Linux host"
-    ]
-  },
-  {
-    "title": "Portable Cyberdeck Platform",
-    "slug": "cyberdeck",
-    "description": "Raspberry Pi 5 cyberdeck — portable, modular, documented, and field-ready. Hardware selection, OS hardening, power, and reproducible build docs.",
-    "category": "Hardware",
-    "github_url": "https://github.com/RealPhantomLee/cyberdeck-platform",
-    "summary": "Turns the persistent OS from Brick #1 into a physical, deployable system that can be operated at a desk, in a lab, or in the field. The emphasis is on hardware integration, mobility, power management, and documentation — not offensive techniques. Brick #1 is the brain; this brick is the body.",
-    "skills": [
-      "Hardware integration",
-      "Portable lab design",
-      "Power-budget planning",
-      "Linux hardening",
-      "Reproducible documentation"
-    ],
-    "tools": [
-      "Raspberry Pi 4 / 5",
-      "External Wi-Fi adapter (monitor mode)",
-      "OLED display (I²C 128×64)",
-      "USB / NVMe storage",
-      "Linux"
-    ],
-    "results": [
-      "Portable cybersecurity workstation with stable power profile",
-      "Documented hardware BOM and assembly process",
-      "OS hardening baseline applied",
-      "Networking configured for non-offensive operation"
+      "Performed full enumeration against EMP, ColddBox, and Hackable II",
+      "Identified P1-class findings on each target with reproducible evidence",
+      "Validated at least one high-impact finding per asset (e.g. anonymous FTP on Hackable II)",
+      "Produced remediation plans with compensating controls",
+      "Verified mitigations through follow-up scans"
     ]
   },
   {
@@ -261,34 +122,90 @@
     ]
   },
   {
-    "title": "Azure Security Hardening & Monitoring",
-    "slug": "azure-security-hardening",
-    "description": "End-to-end Azure security: NSG IP allowlisting, key-only SSH, Log Analytics + AMA + DCR, KQL detections for SSH success / failure / brute-force, and alert rules.",
-    "category": "Cloud",
-    "github_url": "https://github.com/RealPhantomLee/azure-security-monitoring-lab",
-    "summary": "Provision → Harden → Monitor → Detect → Respond → Improve. Stand up infrastructure (Cell A), harden it (NSG /32 allowlisting, SSH key-only), instrument it (Log Analytics + Azure Monitor Agent + Data Collection Rule for LOG_AUTH/LOG_AUTHPRIV), write KQL detections (heartbeat, SSH success / failure, brute-force ≥5 failures in 5 minutes), configure alerts (`ssh-bruteforce-5in5m`, `heartbeat-stale-5m`), and verify by exercising the alerts.",
+    "title": "Secure Business Web Platform",
+    "slug": "cybersec-web-services",
+    "description": "Self-hosted C++ business web platform — Stripe Checkout with HMAC-verified webhooks, session-authenticated admin dashboard, rate-limited endpoints, deployed behind a Cloudflare Tunnel.",
+    "category": "Cybersecurity",
+    "github_url": "https://github.com/RealPhantomLee/CyberSec-Web-Services",
+    "summary": "A production business website built with security as a first-class requirement rather than an afterthought: a header-only C++ backend (cpp-httplib + nlohmann/json) handles a service catalog, blog, and contact form, while OpenSSL-backed HMAC-SHA256 verifies every inbound Stripe webhook signature before it's trusted. Session auth uses random hex tokens with a 90-second TTL, per-IP rate limiting protects login and contact endpoints, and the whole stack runs on a Raspberry Pi 5 behind a Cloudflare Tunnel with no exposed ports.",
     "skills": [
-      "Cloud security engineering",
-      "Network access restriction (NSG /32)",
-      "SSH key-only authentication",
-      "Centralized logging with AMA + DCR",
-      "KQL detection engineering",
-      "Alert rule design"
+      "Secure backend engineering (C++)",
+      "Webhook signature verification (HMAC-SHA256)",
+      "Session security design (short-TTL tokens)",
+      "Rate limiting / abuse prevention",
+      "Payment integration (Stripe Checkout)",
+      "Zero-exposed-port deployment (Cloudflare Tunnel)"
     ],
     "tools": [
-      "Microsoft Azure",
-      "Log Analytics Workspace",
-      "Azure Monitor Agent (AMA)",
-      "Data Collection Rule (DCR)",
-      "KQL",
-      "Azure Monitor Alerts"
+      "C++ / cpp-httplib",
+      "OpenSSL",
+      "nlohmann/json",
+      "Stripe API",
+      "Cloudflare Tunnel",
+      "Raspberry Pi 5"
     ],
     "results": [
-      "Inbound SSH restricted to a single /32 source",
-      "Password auth disabled; SSH key-only enforced",
-      "Linux auth logs centralized into Log Analytics",
-      "KQL detections covering SSH success, failure, and brute-force",
-      "Two Sev-3 alerts firing on real telemetry"
+      "HMAC-SHA256 signature verification on every Stripe webhook event",
+      "Session tokens with 90s TTL and per-IP rate limiting (login: 5/15min, contact: 3/hr)",
+      "Admin dashboard served from an obscured, session-gated URL",
+      "Zero inbound ports exposed — all traffic via Cloudflare Tunnel",
+      "Live in production at phantomcybersolutions.com"
+    ]
+  },
+  {
+    "title": "Portable Cyberdeck Platform",
+    "slug": "cyberdeck",
+    "description": "Raspberry Pi 5 cyberdeck — portable, modular, documented, and field-ready. Hardware selection, OS hardening, power, and reproducible build docs.",
+    "category": "Hardware",
+    "github_url": "https://github.com/RealPhantomLee/cyberdeck-platform",
+    "summary": "Turns the persistent OS from Brick #1 into a physical, deployable system that can be operated at a desk, in a lab, or in the field. The emphasis is on hardware integration, mobility, power management, and documentation — not offensive techniques. Brick #1 is the brain; this brick is the body.",
+    "skills": [
+      "Hardware integration",
+      "Portable lab design",
+      "Power-budget planning",
+      "Linux hardening",
+      "Reproducible documentation"
+    ],
+    "tools": [
+      "Raspberry Pi 4 / 5",
+      "External Wi-Fi adapter (monitor mode)",
+      "OLED display (I²C 128×64)",
+      "USB / NVMe storage",
+      "Linux"
+    ],
+    "results": [
+      "Portable cybersecurity workstation with stable power profile",
+      "Documented hardware BOM and assembly process",
+      "OS hardening baseline applied",
+      "Networking configured for non-offensive operation"
+    ]
+  },
+  {
+    "title": "Security Operations HUD",
+    "slug": "security-hud",
+    "description": "Bash-driven operator HUD for a portable cyberdeck — tmux dashboard, KEY=VALUE status feeds, and one-line controls for network mode, logging, and capture.",
+    "category": "Cybersecurity",
+    "github_url": "https://github.com/RealPhantomLee/interface-hud-operator-controls",
+    "summary": "A glanceable operator interface for a Pi-based cyberdeck operating in the field. Three things — status producers that emit machine-readable KEY=VALUE blocks (host, CPU, memory, temperature, interface state, channel, active tools), a tmux 4-pane dashboard that watches them, and operator controls that toggle network mode, logging, and capture. No GUI dependencies; sudo-aware so controls degrade gracefully if not root.",
+    "skills": [
+      "Terminal interface design",
+      "Operational workflow automation",
+      "Bash scripting (with `set -euo pipefail`)",
+      "tmux session orchestration",
+      "Privilege-aware tool design"
+    ],
+    "tools": [
+      "Bash",
+      "tmux",
+      "systemd",
+      "iproute2",
+      "OLED (optional, I²C 128×64)"
+    ],
+    "results": [
+      "KEY=VALUE producers for host, network, and tool state",
+      "4-pane tmux dashboard (render / tools / net / status)",
+      "Sudo-aware operator toggles (managed / monitor / lab modes)",
+      "State persisted across reboots via the encrypted persistence partition"
     ]
   },
   {
@@ -348,38 +265,6 @@
       "Three-service stack (Homarr / AnythingLLM / Ollama) with correct cross-platform host bridging",
       "Optional extras (code-server, WeTTY, Filebrowser) as separate compose files",
       "Sanitization checklist enforces no real secrets or hostnames in the public repo"
-    ]
-  },
-  {
-    "title": "VaultKeeper — Encrypted Knowledge Platform",
-    "slug": "vaultkeeper",
-    "description": "Local-first, end-to-end encrypted knowledge platform — Tauri desktop + React Native mobile + Rust (Axum) sync server on a Pi. XChaCha20-Poly1305, SQLite FTS5, D3 graph view.",
-    "category": "Cybersecurity",
-    "github_url": "https://github.com/RealPhantomLee/VaultKeeper",
-    "summary": "An Obsidian-style knowledge platform that puts the user in control of their data. Notes are stored as plain markdown on the device, encrypted client-side with XChaCha20-Poly1305 (libsodium) before optional sync, and synced to a Raspberry Pi running a Rust Axum server in Docker. Cross-platform: Tauri (desktop) + React Native (mobile) sharing a Rust crypto/sync core.",
-    "skills": [
-      "End-to-end encryption design (XChaCha20-Poly1305 / libsodium)",
-      "Local-first sync protocol design",
-      "Cross-platform mobile + desktop architecture",
-      "Self-hosted server deployment (Docker on Pi)",
-      "TLS / Tailscale / firewall hardening"
-    ],
-    "tools": [
-      "Tauri",
-      "React Native",
-      "Rust (Axum)",
-      "TypeScript",
-      "SQLite (FTS5)",
-      "libsodium",
-      "Docker / Docker Compose",
-      "Argon2id"
-    ],
-    "results": [
-      "Monorepo with shared TypeScript types, crypto, and sync-protocol packages",
-      "Tauri desktop app with TipTap editor, command palette, D3 graph view",
-      "React Native mobile app",
-      "Rust sync server with JWT + Argon2id auth",
-      "Docker / Nginx / Tailscale deployment templates"
     ]
   }
 ]
